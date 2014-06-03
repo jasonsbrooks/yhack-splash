@@ -16,40 +16,48 @@
 			</div>
 			<div class="splash-content">
 				<form target="_self" onsubmit="" action="javascript: postForm()">
-	        <div class="line">
-	          <input id="email" type="email" placeholder="Email" autocomplete="off" />
-	        </div>
-	        <div class="line">
-	          <button>Submit</button>
-	        </div>
-	      </form>
-	     </div>
+			        <div class="line">
+			          <input id="email" type="email" placeholder="Email Us" autocomplete="off" />
+			        </div>
+			        <div class="line">
+			          <button>Stay in touch</button>
+			        </div>
+	      		</form>
+	    	 </div>
+			<div class="splash-social">
+		     	<a href="mailto:team@yhack.org"><img src="img/mail.png" width="30" height="30" style="margin-right: 15px;"></a>
+		     	<a href="https://www.facebook.com/whyhackatyhack"><img src="img/facebook.png" width="30" height="30" style="margin-right: 15px;"></a>
+		     	<a href="https://twitter.com/YaleHack"><img src="img/twitter.png" width="30" height="30"></a>
+		     </div>
 		</div>
 
 		<script>
+			function validateEmail(email) { 
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+			}
+
 	    function postForm(){
-	        var email = $('#email').val();
-	        if (email !== "") {
-	          $.ajax({
-	              url: "https://docs.google.com/a/yhack.org/forms/d/1LiDfLREJLrSONN1q3iKgJyjj4Hx3Dz5af5bbNio8o9w/formResponse",
-	              data: { "entry.43496564" : email },
-	              type: "POST",
-	              dataType: "xml",
-	              statusCode: {
-	                  0: function (){
-	                      $('#email').val("");
-	                      //Success message
-	                  },
-	                  200: function (){
-	                      $('#email').val("");
-	                      //Success Message
-	                  }
-	              }
-	          });
-	        }
-	        else {
-	            //Error message
-	        }
+        var email = $('#email').val();
+        if (validateEmail(email)) {
+          $.ajax({
+            url: "https://docs.google.com/a/yhack.org/forms/d/1LiDfLREJLrSONN1q3iKgJyjj4Hx3Dz5af5bbNio8o9w/formResponse",
+            data: { "entry.43496564" : email },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+              0: function (){
+                $('#email').val("").attr("placeholder", "Thanks! We'll be in touch.");
+              },
+              200: function (){
+                $('#email').val("").attr("placeholder", "Thanks! We'll be in touch.");
+              }
+            }
+          });
+        }
+        else {
+          $('#email').val("").attr("placeholder", "That's not a valid email.");
+        }
 	    }
 		</script>
 	</body>

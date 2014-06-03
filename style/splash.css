@@ -8,9 +8,17 @@ body {
   height: 100%;
   width: 100%;
   padding-top: 80px;
+  padding-bottom:90px;
 }
 
 .splash-logo {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.splash-social {
+	padding-top: 20px;
 	position: relative;
 	margin: 0 auto;
 	text-align: center;
@@ -24,13 +32,11 @@ h1 {
   margin: 30px 0 10px;
 }
 
-
 h2 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   color: white;
-  margin: 10px 0 10px;
+  margin: 10px 0 10px 0;
 }
-
 
 .line {
   margin: 0 auto;
