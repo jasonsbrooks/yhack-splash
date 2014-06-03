@@ -8,3 +8,36 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.line {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.splash-content {
+  position: relative;
+  top: 30%;
+  width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  margin: 0 auto 10px auto;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+button {
+  margin: 0 auto;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 40px;
+  width: 90%;
+  border: none;
+  outline: none;
+}
