@@ -10,9 +10,6 @@
 		<div class="splash-image">
 			<form target="_self" onsubmit="" action="javascript: postForm()">
         <div class="line">
-          <input id="name" type="text" placeholder="Name" autocomplete="off" autofocus />
-        </div>
-        <div class="line">
           <input id="email" type="email" placeholder="Email" autocomplete="off" />
         </div>
         <div class="line">
@@ -23,22 +20,19 @@
 
 		<script>
 	    function postForm(){
-	        var name = $('#name').val();
 	        var email = $('#email').val();
-	        if ((name !== "") && (email !== "")) {
+	        if (email !== "") {
 	          $.ajax({
-	              url: "https://docs.google.com/a/yhack.org/forms/d/1uEvi_KN8SWp_OdVxxZcrxNRx5Gt4NlWs9bMUgPZFg4A/formResponse",
-	              data: { "entry.1029757417" : name, "entry.1313521578" : email },
+	              url: "https://docs.google.com/a/yhack.org/forms/d/1LiDfLREJLrSONN1q3iKgJyjj4Hx3Dz5af5bbNio8o9w/formResponse",
+	              data: { "entry.43496564" : email },
 	              type: "POST",
 	              dataType: "xml",
 	              statusCode: {
 	                  0: function (){
-	                      $('#name').val("");
 	                      $('#email').val("");
 	                      //Success message
 	                  },
 	                  200: function (){
-	                      $('#name').val("");
 	                      $('#email').val("");
 	                      //Success Message
 	                  }
