@@ -1,64 +1,71 @@
-<!DOCTYPE html>
-
-<html>	
+<html>
 	<head>
-		<title>Y-Hack 2013 | Yale University Hackathon</title>
-    	<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta name="author" content="Yale CS Hacker Organization" />
-		<meta name="description" content="Y-Hack 2013 is Yale University's National Hackathon" />
-		<meta property="og:image" content="http://www.y-hack.com/img/YHACK.png" />
-
-		<link rel="shortcut icon" href="/img/favicon4.ico" >
-		<link rel='stylesheet' media='screen and (min-width: 901px)' href='style/main.css' />
-		<link rel='stylesheet' media='screen and (min-width: 801px) and (max-width: 900px)' href='style/medium.css' />
-		<link rel='stylesheet' media='screen and (max-width: 800px)' href='style/small.css' />
-		<script src="scripts/modernizr.custom.37797.js"></script> 
-		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
-		<script>!window.jQuery && document.write('<script src="/scripts/jquery-1.6.1.min.js"><\/script>')</script>
+		<title>Y-Hack 2014</title>
+		<link href="style/reset.css" rel="stylesheet">
+		<link href="style/splash.css" media="screen" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/png" href="img/yhackLogo.png"/>
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	  <script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
+		</head>
 	</head>
-
 	<body>
-		<div id="wrapper">
-			<header id="branding">
-				<div class="title"><a href="/"><img src='img/logogreen.png' style="vertical-align: text-bottom; height: 40px"><div class="cursor">|</div></a>
-				</div>
-			</header>
-		</div>
-		
-		<div id="top">
-			<div class="content">
-				  <div id="about-us">
-				  	<!--<h2>Why hack at Y-Hack?</h2>
-				  	<h3>We're finally opening our doors.</h3>-->
-	          <h4><img src="img/YHACK.png" alt="" border="0" align=""></h4>
-				  	<h2 style="line-height:1.2em;"> 1000+ hackers.</br>
-	               42 hours. Halloween.</h2>
-				  	<h3 style="line-height:1.2em;"> October 31 to November 2, 2014 @ Yale </br>
-				  	Details and Registration Coming Soon.</h3>
-				  <div id="buttons" style="text-align: center;">
-				  	<a id="signup" href="submit.html">Stay Updated</a>
-				  	<a href="mailto:sponsors@yhack.org">Sponsor us</a>
-				  </div>
-	        	</div>
-			 </div>
+		<div class="splash-image">
+			<div class="splash-logo">
+				<img src="img/logo-pumpkin-clear.png" width="300">
+				<h1>YHACK</h1>
+				<h2><span>Halloween</span> 2014. <span>36</span> Hours. <span>1500</span> Hackers.</h2>
+			</div>
+			<div class="splash-content">
+				<form target="_self" onsubmit="" action="javascript: postForm()">
+	        <div class="line">
+	          <input id="email" type="text" placeholder="email" autocomplete="off" />
+	        </div>
+	        <div class="line">
+	          <button>trick or treat</button>
+	        </div>
+	        <h3>Fill me out to stay updated</h2>
+    		</form>
     	</div>
+    	<div class="sponsor-content">
+    		<h2><span>Sponsor?</span> Get in touch with us at <a href="mailto:team@yhack.org"><span>team@yhack.org</span></a></h2>
+    	</div>
+			<div class="splash-social">
+		     	<a href="mailto:team@yhack.org"><img src="img/mail.png" width="30" height="30" style="margin-right: 15px;"></a>
+		     	<a href="https://www.facebook.com/whyhackatyhack"><img src="img/facebook.png" width="30" height="30" style="margin-right: 15px;"></a>
+		     	<a href="https://twitter.com/YaleHack"><img src="img/twitter.png" width="30" height="30"></a>
+		     </div>
+		</div>
 
-		
-		<!-- Additional scripts -->
-		<script src="scripts/code.js"></script>
 		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			function validateEmail(email) { 
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+			}
 
-			ga('create', 'UA-42185504-1', 'y-hack.com');
-			ga('send', 'pageview');
+	    function postForm(){
+        var email = $('#email').val();
+        if (validateEmail(email)) {
+          $.ajax({
+            url: "https://docs.google.com/a/yhack.org/forms/d/1LiDfLREJLrSONN1q3iKgJyjj4Hx3Dz5af5bbNio8o9w/formResponse",
+            data: { "entry.43496564" : email },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+              0: function (){
+                $('#email').val("").attr("placeholder", "Thanks! We'll be in touch.");
+              },
+              200: function (){
+                $('#email').val("").attr("placeholder", "Thanks! We'll be in touch.");
+              }
+            }
+          });
+        }
+        else {
+          $('#email').val("").attr("placeholder", "That's not a valid email.");
+        }
+	    }
 		</script>
-		<script type="text/javascript">if(window.console){console.log("Thanks for peeking under the hood. We want you to come to Y-Hack: http://www.y-hack.comfregister.html")}</script>
 	</body>
-  
 </html>
