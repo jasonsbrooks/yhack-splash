@@ -2,13 +2,19 @@
 	<head>
 		<title>Y-Hack 2014</title>
 		<link href="style/splash.css" media="screen" rel="stylesheet">
+		<link href="style/bootstrap.min.css" media="screen" rel="stylesheet">
 	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	  <script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
 		</head>
 	</head>
 	<body>
 		<div class="splash-image">
-			<form target="_self" onsubmit="" action="javascript: postForm()">
+			<div class="container">
+				<div class="row">
+					<img src="img/yhackLogo.png" alt="logo" width="70" height="70">
+					<form target="_self" onsubmit="" action="javascript: postForm()">
+				</div>
+			</div>
         <div class="line">
           <input id="email" type="email" placeholder="Email" autocomplete="off" />
         </div>

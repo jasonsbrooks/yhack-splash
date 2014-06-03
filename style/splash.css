@@ -3,8 +3,12 @@ body {
 }
 
 .splash-image {
-  background: url('../img/YHACK_SPLASH.png') no-repeat center center fixed;
+  background: url('../img/background.png') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
+}
+
+.splash-logo {
+	
 }
