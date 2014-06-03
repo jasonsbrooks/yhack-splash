@@ -56,22 +56,60 @@ h2 {
 }
 
 input {
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
   margin: 0 auto 10px auto;
   text-align: center;
-  font-size: 30px;
-  padding: 20px;
+  font-size: 20px;
+  padding: 5px;
   width: 90%;
   border: none;
   outline: none;
+  background-color: rgba(256, 256, 256, .2);
+  color: #FF9100;
+  color: rgba(256, 256, 256, .6);
+  text-transform: uppercase;
+}
+
+
+[type="search"] {
+  -moz-appearance:    textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+*::-webkit-input-placeholder {
+  color: rgba(256, 256, 256, .6);
+}
+*:-moz-placeholder {
+  opacity:  .6;
+}
+*::-moz-placeholder {
+  color:    rgba(256, 256, 256, .6);
+  opacity:  .6;
+}
+*:-ms-input-placeholder {
+  color:    rgba(256, 256, 256, .6);
 }
 
 button {
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
   margin: 0 auto;
   cursor: pointer;
   color: #ffffff;
-  font-size: 30px;
-  padding: 20px 40px;
+  font-size: 20px;
+  padding: 5px;
   width: 90%;
-  border: none;
+  background-color: rgba(255,145,0, .3);
+  border: 2px solid rgb(255,145,0);
   outline: none;
+  text-transform: uppercase;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+button:hover {
+  color: #ffd39a;
 }
