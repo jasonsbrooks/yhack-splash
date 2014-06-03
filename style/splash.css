@@ -8,7 +8,7 @@ body {
   height: 100%;
   width: 100%;
   padding-top: 80px;
-  padding-bottom:90px;
+  padding-bottom:70px;
 }
 
 .splash-logo {
@@ -114,3 +114,24 @@ button {
 button:hover {
   color: #FF9100;
 }
+
+#cf {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+
