@@ -17,6 +17,10 @@ body {
 	text-align: center;
 }
 
+.splash-logo span {
+	color: #FF9100;
+}
+
 .splash-social {
 	padding-top: 20px;
 	position: relative;
@@ -30,7 +34,9 @@ h1 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
   margin: 30px 0 10px;
+  letter-spacing:12px
 }
+
 
 h2 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -45,7 +51,7 @@ h2 {
 
 .splash-content {
   width: 500px;
-  margin: 60px auto 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 input {
