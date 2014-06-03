@@ -1,5 +1,9 @@
+body {
+  margin: 0;
+}
+
 .splash-image {
-  background-image: url('/images/YHACK_SPLASH.png') no-repeat center center fixed;
+  background: url('../img/YHACK_SPLASH.png') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
