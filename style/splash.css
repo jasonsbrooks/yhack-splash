@@ -3,7 +3,7 @@ body {
 }
 
 .splash-image {
-  background: url('../img/background.png') no-repeat center center fixed;
+  background: url('../img/background.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -21,7 +21,7 @@ body h1 {
 	font-size: 4.5em;
 }
 
-body h2 {
+.splash-logo h2 {
 	color: white;
 }
 
