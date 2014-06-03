@@ -10,7 +10,7 @@
 	<body>
 		<div class="splash-image">
 			<div class="splash-logo">
-				<img src="img/yhackLogo.png" width="200" height="200">
+				<img src="img/logo-pumpkin-clear.png" width="300" height="300">
 				<h1>YHACK</h1>
 				<h2>Halloween 2014</h2>
 			</div>
@@ -32,29 +32,32 @@
 		</div>
 
 		<script>
+			function validateEmail(email) { 
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(email);
+			}
+
 	    function postForm(){
-	        var email = $('#email').val();
-	        if (email !== "") {
-	          $.ajax({
-	              url: "https://docs.google.com/a/yhack.org/forms/d/1LiDfLREJLrSONN1q3iKgJyjj4Hx3Dz5af5bbNio8o9w/formResponse",
-	              data: { "entry.43496564" : email },
-	              type: "POST",
-	              dataType: "xml",
-	              statusCode: {
-	                  0: function (){
-	                      $('#email').val("");
-	                      //Success message
-	                  },
-	                  200: function (){
-	                      $('#email').val("");
-	                      //Success Message
-	                  }
-	              }
-	          });
-	        }
-	        else {
-	            //Error message
-	        }
+        var email = $('#email').val();
+        if (validateEmail(email)) {
+          $.ajax({
+            url: "https://docs.google.com/a/yhack.org/forms/d/1LiDfLREJLrSONN1q3iKgJyjj4Hx3Dz5af5bbNio8o9w/formResponse",
+            data: { "entry.43496564" : email },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+              0: function (){
+                $('#email').val("").attr("placeholder", "Thanks! We'll be in touch.");
+              },
+              200: function (){
+                $('#email').val("").attr("placeholder", "Thanks! We'll be in touch.");
+              }
+            }
+          });
+        }
+        else {
+          $('#email').val("").attr("placeholder", "That's not a valid email.");
+        }
 	    }
 		</script>
 	</body>
