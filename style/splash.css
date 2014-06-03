@@ -16,6 +16,13 @@ body {
 	text-align: center;
 }
 
+.splash-social {
+	padding-top: 20px;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+}
+
 h1 {
 	color: white;
 	font-size: 4.5em;
