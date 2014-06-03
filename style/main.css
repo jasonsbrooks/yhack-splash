@@ -1,0 +1,410 @@
+/* Global reset: http://meyerweb.com/eric/tools/css/reset/  */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ********************* */
+/* Site Styles */
+
+body {
+	background-color: #0F4D92;
+	overflow-x: hidden;
+	line-height: 1.5;
+	color: #eee;
+	font-size: 20px;
+	font-family: Open Sans, Helvetica, Arial,sans-serif;
+}
+
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#82B600;
+	outline: none;
+	text-decoration:none;
+}
+a:hover { 
+	color: white;
+}
+
+p {
+	margin: 1em 0;
+}
+
+hr { 
+  width:100%; 
+  height:1px; 
+  background: #fff 
+  color:#808080;
+}
+
+#wrapper {
+	position: relative;
+}
+
+#branding {
+	position: fixed;
+	z-index: 4;
+	width: 100%;
+	background: #282828;
+}
+	#branding .title {
+		width: 940px;
+		padding: 10px 10px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-family: Courier;
+		font-size: 40px;
+		font-weight: 500;
+	}
+	#branding .cursor {
+		margin-bottom: 2px;
+		display: inline;
+		font-size: 40px;
+	}
+	#branding .warning {
+		display: inline;
+		vertical-align: middle;
+		font-size: 20px;
+		color: red;
+	}
+
+.content {
+	z-index: 3;
+	position: relative;
+	max-width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+	line-height: 1.7;
+}
+
+#top {
+  /*background-color: #0F4D92;*/
+	height: 800px;
+	padding-top: 25px;
+	background: url("/img/test.jpg") no-repeat left top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	}
+
+#about-us {
+	position: absolute;
+	padding-top: 125px;
+	/*width: 550px;*/
+}
+	#about-us h1 {
+		font-size: 50px;
+		color: #eee;
+		font-weight: 800;
+		line-height: 65px;
+	}
+
+  #about-us h2 {
+    font-size: 50px;
+    color:#000;
+    font-weight: 800;
+    line-height: 65px;
+  }
+
+  #about-us h3 {
+    margin-top:13px;
+    font-size:30px;
+    color:#404040;
+    font-weight: 500;
+  }
+  
+  #about-us h4 {
+    margin-bottom:15px;
+  }
+
+	#buttons {
+		margin-top: 45px;
+	}
+	#about-us #buttons a {
+		color: #eee;
+		background-color: #339933;
+		padding: 15px;
+		margin-right: 20px;
+		border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	-webkit-border-radius: 4px;
+    	border-bottom: rgba(0,0,0,0.1) 3px solid;
+	}
+	#about-us #buttons a#signup {
+		background-color: #950046
+	}
+	#about-us #buttons a:hover {
+		background-color: #33CC33;
+	}
+	#about-us #buttons a#signup:hover {
+		background-color: #c8005e;
+	}
+
+#logo {
+	z-index: 6;
+	position: relative;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 940px;
+	margin-left: -470px; /* move left by half element's width */
+}
+	#big-y {
+		position: absolute;
+		width: 600px;
+		height: auto;
+		top: -753px;
+		left: 470px;
+	}
+
+.banner  {
+	font-size: 50px;
+	text-align: center;
+	width: 100%;
+	background-color: #282828;
+}
+.sponsors {
+	background-color: #fff;
+	padding: 10px 0 40px 0;
+	position: relative;
+	width: 100%;
+	font-size: 80px;
+	text-align: center;
+}
+	.sponsors img {
+		display: inline-block;
+		vertical-align: middle;
+		opacity: 0.5;
+		-webkit-filter: grayscale(100%);
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    	filter: gray; /* IE6-9 */
+	}
+	.sponsors img:hover {
+		opacity: 1;
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+		-webkit-filter: grayscale(0%);
+	}
+
+	.sponsor-row {
+		display: block;
+		width: 960px;
+		margin: 0 auto;
+	}
+	.sponsor-row div {
+		text-align: center;
+		height: 150px;
+		display: inline-block;
+	}
+	.size1 {
+		width: 469px;
+    	padding-top: 50px;
+	}
+		.size1 img {
+			max-width: 469px;
+		}
+	.size2 {
+		width: 305px;
+	}
+		.size2 img {
+			max-width: 305px;
+		}
+	.size3 {
+		width: 222px;
+	}
+		.size3 img {
+			max-width: 222px;
+			max-height: 120px;
+		}
+  .size4 {
+    width: 150px;
+    padding:0 10px;
+  }
+    .size4 img {
+    	max-width: 160px;
+    	max-height: 80px;
+    }
+
+#bottom {
+	background: url("/img/YaleBG2.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 300px;
+	height: 600px;
+	text-align: center;
+}
+	#actions {
+		padding-top: 300px;
+	}
+	#bottom h1 {
+		font-size: 50px;
+    font-weight: 800;
+		margin-bottom: 20px;
+	}
+	#bottom a {
+		padding-top: 700px;
+		background-color: #950046;
+		color: #eee;
+		font-size: 30px;
+		padding: 15px;
+		margin-right: 20px;
+		border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	-webkit-border-radius: 4px;
+    	border-bottom: rgba(0,0,0,0.1) 5px solid;
+	}
+	#bottom a:hover {
+		background-color: #c8005e;
+	}
+
+/* *************** */
+/* About Page */
+
+#hero-about {
+	padding-top: 110px;
+	width: 100%;
+	background: url("/img/CEID.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 460px;
+}
+	.blast {
+		background-color: #282828;
+		text-align: center;	
+		font-size: 30px;
+		line-height: 1.4em;
+		padding: 5px 10px;
+	}
+	#final {
+		font-size: 60px;
+	}
+
+body#about {
+	background-color: #fff;
+}
+
+#info {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #0d0d0d;
+	background-color: #fff;
+}
+	#info h1 {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	#info a:hover {
+		color: #000;
+	}
+
+#about-actions {
+	text-align: center;
+	padding-top: 50px;
+}
+	a#about-signup {
+		margin: 0 auto;
+		text-align: center;
+		background-color: #950046;
+		color: #eee;
+		font-size: 30px;
+		padding: 15px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-bottom: rgba(0,0,0,0.1) 5px solid;
+	}
+	a#about-signup:hover {
+		color: #eee;
+		background-color: #c8005e;
+	}
+
+/* ************** */
+/* Register Page */
+
+#register {
+	background: url("/img/register_bg.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 150px;
+	padding-bottom: 100px;
+	background-color: #0F4D92;
+}
+
+#terminal {
+	display: block;
+	margin: 0 auto;
+	width: 700px;
+	-mox-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border-top: 45px solid #bcbcbc;
+	border-bottom: 10px solid #bcbcbc;
+	border-left: 10px solid #bcbcbc;
+	border-right: 10px solid #bcbcbc;
+	padding: 20px;
+	background-color: #282828;
+}
+	#terminal-buttons {
+		margin-left: -20px;
+		margin-top: -58px;
+		margin-bottom: 35px;
+	}
+		#btn {
+			border-radius: 50%;
+			height: 15px;
+			width: 15px;
+			display: inline-block;
+			margin-left: 5px;
+			box-shadow: inset -2px -2px 4px rgba(0,0,0,.3), inset 0px 2px 3px rgba(255,255,255,.9);
+		}
