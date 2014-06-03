@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #000;
 }
 
 .splash-image {
@@ -28,6 +29,14 @@ body {
 	text-align: center;
 }
 
+.splash-social a:hover{
+  filter: hue-rotate(270deg);
+  -webkit-filter: hue-rotate(270deg);
+  -moz-filter: hue-rotate(270deg);
+  -o-filter: hue-rotate(270deg);
+  -ms-filter: hue-rotate(270deg);
+}
+
 h1 {
 	color: white;
 	font-size: 4.5em;
@@ -54,6 +63,25 @@ h2 {
   width: 500px;
   margin: 40px auto 0 auto;
   text-align: center;
+}
+
+.sponsor-content {
+  text-align: center;
+  padding-top: 25px;
+}
+
+h2 {
+  font-size: 15px;
+  font-family: "Oxygen", Helvetica, Arial, sans-serif;
+}
+
+.sponsor-content a {
+  text-decoration: none;
+  color: white;
+}
+
+.sponsor-content span {
+  color: #FF9100;
 }
 
 input {
@@ -104,6 +132,7 @@ button {
   border: none;
   outline: none;
   text-transform: uppercase;
+  color: rgba(256, 256, 256, .9);
   -moz-transition: all .2s ease-in;
   -ms-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
