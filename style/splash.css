@@ -65,12 +65,19 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  color: #777;
+  font-size: .75em;
+  padding-top: 10px;
+}
+
 .sponsor-content {
   text-align: center;
   padding-top: 25px;
 }
 
-h2 {
+.sponsor-content h2 {
   font-size: 15px;
   font-family: "Oxygen", Helvetica, Arial, sans-serif;
 }
